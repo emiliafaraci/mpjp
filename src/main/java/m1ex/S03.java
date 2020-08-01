@@ -8,10 +8,15 @@ public class S03 {
      * @return "positive", "negative", or "zero"
      */
     public static String checkSign(int value) {
-        // TODO
-        return "";
+       if(value>0) {
+        return "positive";
+       }else if (value <0) {
+        return "negative";
+       }
+       
+       return "zero";
+   
     }
-
     /**
      * Check if the parameter is odd
      * 
@@ -19,7 +24,11 @@ public class S03 {
      * @return "odd" or "even"
      */
     public static boolean isOdd(int value) {
-        // TODO
+        
+    	if(value %2 !=0) {
+    		return true;
+    	}
+    	
         return false;
     }
 
@@ -30,8 +39,33 @@ public class S03 {
      * @return "zero" for 0 ... "nine" for 9, or "other"
      */
     public static String asWord(int value) {
-        // TODO
-        return "";
+       
+    	if (value >=0 && value<=9) {
+    	if (value == 0) {
+        	return "zero" ;
+        }else if (value ==1) {
+        	return "one";
+        }else if (value ==2) {
+        	return "two";
+        }else if (value ==3) {
+        	return "three";
+        }else if (value==4) {
+        	return "four";
+        }else if (value ==5) {
+        	return "five";
+        }else if (value ==6) {
+        	return "six";
+        }else if (value ==7) {
+        	return "seven";
+        }else if (value ==8) {
+        	return "eight";
+        }else if (value ==9) {
+        	return "nine";
+        }else if (value ==10) {
+        	return "ten";
+        }
+    }
+    	return "other";
     }
 
     /**
@@ -43,8 +77,22 @@ public class S03 {
      * @return a letter in [A, F]
      */
     public static char vote(double percentile) {
-        // TODO
-        return 'F';
+        
+    		if (percentile <=50) {
+    			return 'F';
+    		}else if (percentile >50 && percentile <= 60) {
+    			return 'E';
+    		}else if (percentile >60 && percentile <=70) {
+    			return 'D';
+    		}else if(percentile >70 && percentile<=80) {
+    			return 'C';
+    		}else if (percentile >80 && percentile <= 90) {
+    			return 'B';
+    		}
+    	
+    			return 'A';
+ 
+       
     }
 
     /**
@@ -54,8 +102,10 @@ public class S03 {
      * @return true if leap year
      */
     public static boolean isLeapYear(int year) {
-        // TODO
+        if(year%4!=0) {
         return false;
+        }
+        return true;
     }
 
     /**
@@ -69,8 +119,38 @@ public class S03 {
     public static int[] sort(int a, int b, int c) {
         int[] result = new int[3];
 
-        // TODO
-
+     
+        if(a>b) {
+        	if(a>c){
+        		result[2]=a;
+        		
+        		if(b>c) {
+        		result[1]=b;
+        		result[0]=c;
+            }
+        		result[0]=c;
+        		result[1]=b;
+        		
+        }
+        } 	else if(a<b) {
+        	
+        	if(b>c) {
+        	result[2]=b;
+        	
+        	if (a>c) {
+        		result[0]=c;
+        		result[1]=a;
+        	}
+        		result[0]=a;
+        		result[1]=c;
+        	}
+        }
+        result[0]=a;
+        result[1]=b;
+        result[2]=c;
+       
         return result;
-    }
+    
+}
+    
 }
