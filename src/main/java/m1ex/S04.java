@@ -9,10 +9,19 @@ public class S04 {
 	 * @return the sum of all the numbers, or zero
 	 */
 	public static long sum(int first, int last) {
-		// TODO
+		
+		long sum =0;
+		
+		if(first<last) {
+		for (int i=first;i<last+1;i++) {
+			sum+=i;
+		}
+		return sum;
+		}else if(first==last) {
+			return first;
+		}
 		return 0;
 	}
-
 	/**
 	 * Add up only the even numbers in the passed closed interval
 	 * 
@@ -21,10 +30,23 @@ public class S04 {
 	 * @return the sum of all the even numbers, or zero
 	 */
 	public static long evenSum(int first, int last) {
-		// TODO
+		
+long sum =0;
+		
+		if(first<last) {
+		for (int i=first;i<last+1;i++) {
+			if (i%2==0) {
+			sum+=i;
+		}
+		}
+		return sum;
+		}
+		else if(first==last) {
+		return first;
+		}
 		return 0;
 	}
-
+		
 	/**
 	 * Square root using Newton method
 	 * Epsilon should be set to 0.001
@@ -56,7 +78,14 @@ public class S04 {
 	 * @return factorial of input value, or zero
 	 */
 	public static long factorial(int value) {
-		// TODO
+		
+		long fact=1;
+		if(value>0) {
+		for(int i=value;i>0;i--) {
+			fact*=i;
+		}
+		return fact;
+		}
 		return 0;
 	}
 
@@ -80,8 +109,18 @@ public class S04 {
 	public static int[][] multiplicationTable(int value) {
 		int[][] result = new int[0][0];
 
-		// TODO
-
+	if(value!=0) {
+		for (int i=0;i<value;i++) {
+		for(int j=0;j<value;i++) {
+			result[i][j]=(i+1)*(j+1);
+		}
+	}
 		return result;
 	}
-}
+	
+		return result;
+		}
+	}
+	
+
+

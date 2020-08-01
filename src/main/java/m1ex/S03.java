@@ -102,10 +102,10 @@ public class S03 {
      * @return true if leap year
      */
     public static boolean isLeapYear(int year) {
-        if(year%4!=0) {
-        return false;
-        }
+        if(year%4==0 && year%100!=0) {
         return true;
+        }
+        return false;
     }
 
     /**
@@ -144,11 +144,11 @@ public class S03 {
         		result[0]=a;
         		result[1]=c;
         	}
-        }
-        result[0]=a;
+        }else if (a<b&&b<c) {
+        	result[0]=a;
         result[1]=b;
         result[2]=c;
-       
+        }
         return result;
     
 }
