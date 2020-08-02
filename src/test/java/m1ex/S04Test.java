@@ -78,8 +78,15 @@ class S04Test {
     }
 
     @Test
-    void fibonacci() {
-        fail("Not yet implemented");
+    void fibonacci3() {
+        long actual = S04.fibonacci(3);
+        
+        assertThat(actual, is(3L));
+    }
+    
+    void fibonacciNeg() {
+    	long actual = S04.fibonacci(-3);
+    	assertThat(actual, is(-1));
     }
 
     @Test

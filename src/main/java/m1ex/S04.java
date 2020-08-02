@@ -96,8 +96,15 @@ long sum =0;
 	 * @return the Fibonacci number of value, or zero
 	 */
 	public static long fibonacci(int value) {
-		// TODO
-		return 0;
+		if (value>=0) {
+		if (value==0) {
+			return 0;
+		}else if (value==1){
+			return 1;
+		}
+		return (value-1)+(value-2);
+	}
+		return -1;
 	}
 
 	/**
@@ -107,17 +114,17 @@ long sum =0;
 	 * @return The multiplication table for value, when possible
 	 */
 	public static int[][] multiplicationTable(int value) {
-		int[][] result = new int[0][0];
+		int[][] result = new int[value][value];
 
 	if(value!=0) {
 		for (int i=0;i<value;i++) {
-		for(int j=0;j<value;i++) {
+		for(int j=0;j<value;j++) {
 			result[i][j]=(i+1)*(j+1);
-		}
+			}
 	}
 		return result;
+		
 	}
-	
 		return result;
 		}
 	}
